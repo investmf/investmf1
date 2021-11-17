@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mutual Fund</title>
+    <link rel="stylesheet" href="style.css">
+	<script
+		src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+		crossorigin="anonymous"></script>
+	<script>
+		function SubForm (){
+			$.ajax({
+				url:"https://api.apispreadsheets.com/data/20571/",
+				type:"post",
+				data:$("#myForm").serializeArray(),
+				success: function(){
+					alert("Form Data Submitted :)")
+				},
+				error: function(){
+					alert("There was an error :(")
+				}
+			});
+		}
+	</script>
+</head>
+<body>
+    <div class="panel">
+        <div class="state"><br><i class="fa fa-unlock-alt"></i><br><h1>Ready to Invest ?</h1></div>
+        <h3 style="color: white;">Drop your details below</h3>
+        
+	<form id="myForm">
+        <div class="form">
+		<!-- <label>name</label> -->
+		<input placeholder="Name" type="text" name="name" />
+		<br/>
+		<!-- <label>phone_no</label> -->
+		<input placeholder="Enter your Phone No." type="text" name="phone_no" />
+		<br/>
+		<!-- <label>email</label> -->
+		<input placeholder="Enter your email if available" type="text" name="email" />
+		<br/>
+	</form>
+</div>
+	<button onclick='SubForm()' class="login" >Submit</button>
+    <!-- <h2 style="color: white;"><em> We will contact you soon...</em></h2> -->
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+    
+</body>
+<footer>
+  <h4 style="color: white;"> <u> To Know more</u></h4>
+  <br>
+  <h2 style="color: white;">Dr. Babarao Aswar</h2> 
+  <h3>Mutual Fund Advisor</h3>
+  <h4>Call- 9326063128/8999572641</h4>
+
+   
+  </footer>
+</html>
